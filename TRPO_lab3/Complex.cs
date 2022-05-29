@@ -95,8 +95,11 @@ namespace TRPO_lab3
                 Convert.ToDouble((b as Complex).Im) * Convert.ToDouble((b as Complex).Im));
             double nextRe = (Convert.ToDouble(Re) * Convert.ToDouble((b as Complex).Re)
                 + Convert.ToDouble(Im) * Convert.ToDouble((b as Complex).Im)) / tempDenomerator;
-            double nextIm = Convert.ToDouble((b as Complex).Re) * Convert.ToDouble(Im) -
-                Convert.ToDouble(Re) * Convert.ToDouble((b as Complex).Im) / tempDenomerator;
+            double nextIm = (Convert.ToDouble((b as Complex).Re) * Convert.ToDouble(Im) -
+                Convert.ToDouble(Re) * Convert.ToDouble((b as Complex).Im)) / tempDenomerator;
+            nextRe = Math.Round(nextRe, 5); //округляем
+            nextIm = Math.Round(nextIm, 5); //округляем
+
             return new Complex(nextRe.ToString(), nextIm.ToString());
         }
 
