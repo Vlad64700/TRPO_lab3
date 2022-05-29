@@ -558,5 +558,121 @@ namespace TRPO_lab3
         {
             
         }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            int BaseNumber = trackBar1.Value;
+            try
+            {
+                switch (e.KeyCode)
+                {
+                    case Keys.D0:
+                        control.AddDigit('0');
+                        break;
+                    case Keys.D1:
+                        if (BaseNumber > 1)
+                            control.AddDigit(1);
+                        break;
+                    case Keys.D2:
+                        if (BaseNumber > 2)
+                            control.AddDigit(2);
+                        break;
+                    case Keys.D3:
+                        if (BaseNumber > 3)
+                            control.AddDigit(3);
+                        break;
+                    case Keys.D4:
+                        if (BaseNumber > 4)
+                            control.AddDigit(4);
+                        break;
+                    case Keys.D5:
+                        if (BaseNumber > 5)
+                            control.AddDigit(5);
+                        break;
+                    case Keys.D6:
+                        if (BaseNumber > 6)
+                            control.AddDigit(6);
+                        break;
+                    case Keys.D7:
+                        if (BaseNumber > 7)
+                            control.AddDigit(7);
+                        break;
+                    case Keys.D8:
+                        if (BaseNumber > 8)
+                            control.AddDigit(8);
+                        break;
+                    case Keys.D9:
+                        if (BaseNumber > 9)
+                            control.AddDigit(9);
+                        break;
+                    case Keys.A:
+                        if (BaseNumber > 10)
+                            control.AddDigit(10);
+                        break;
+                    case Keys.B:
+                        if (BaseNumber > 11)
+                            control.AddDigit(11);
+                        break;
+                    case Keys.C:
+                        if (BaseNumber > 12)
+                            control.AddDigit(12);
+                        break;
+                    case Keys.D:
+                        if (BaseNumber > 13)
+                            control.AddDigit(13);
+                        break;
+                    case Keys.E:
+                        if (BaseNumber > 14)
+                            control.AddDigit(14);
+                        break;
+                    case Keys.F:
+                        if (BaseNumber > 15)
+                            control.AddDigit(15);
+                        break;
+
+                }
+                RefreshText();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            control.AddDigit(10);
+            RefreshText();
+        }
+
+        private void button30_Click(object sender, EventArgs e)
+        {
+            control.AddDigit(12);
+            RefreshText();
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            control.AddDigit(11);
+            RefreshText();
+        }
+
+        private void button31_Click(object sender, EventArgs e)
+        {
+            control.AddDigit(13);
+            RefreshText();
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+            control.AddDigit(14);
+            RefreshText();
+        }
+
+        private void button33_Click(object sender, EventArgs e)
+        {
+            control.AddDigit(15);
+            RefreshText();
+        }
     }
-}
+    }

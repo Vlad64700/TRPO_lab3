@@ -484,6 +484,7 @@
             this.button28.TabIndex = 30;
             this.button28.Text = "A";
             this.button28.UseVisualStyleBackColor = false;
+            this.button28.Click += new System.EventHandler(this.button28_Click);
             // 
             // button29
             // 
@@ -495,6 +496,7 @@
             this.button29.TabIndex = 31;
             this.button29.Text = "B";
             this.button29.UseVisualStyleBackColor = false;
+            this.button29.Click += new System.EventHandler(this.button29_Click);
             // 
             // button30
             // 
@@ -506,6 +508,7 @@
             this.button30.TabIndex = 32;
             this.button30.Text = "C";
             this.button30.UseVisualStyleBackColor = false;
+            this.button30.Click += new System.EventHandler(this.button30_Click);
             // 
             // button31
             // 
@@ -517,6 +520,7 @@
             this.button31.TabIndex = 33;
             this.button31.Text = "D";
             this.button31.UseVisualStyleBackColor = false;
+            this.button31.Click += new System.EventHandler(this.button31_Click);
             // 
             // button32
             // 
@@ -528,6 +532,7 @@
             this.button32.TabIndex = 34;
             this.button32.Text = "E";
             this.button32.UseVisualStyleBackColor = false;
+            this.button32.Click += new System.EventHandler(this.button32_Click);
             // 
             // button33
             // 
@@ -539,6 +544,7 @@
             this.button33.TabIndex = 35;
             this.button33.Text = "F";
             this.button33.UseVisualStyleBackColor = false;
+            this.button33.Click += new System.EventHandler(this.button33_Click);
             // 
             // menuStrip2
             // 
@@ -655,6 +661,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Калькулятор";
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.panel2.ResumeLayout(false);
