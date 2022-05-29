@@ -54,6 +54,7 @@ namespace TRPO_lab3
             radioButton2.Visible = false;
             trackBar1.Visible = true;
             SetDefaultTrackBar();
+            button16.Enabled = true; // .
 
             control.State = 10;
         }
@@ -75,6 +76,16 @@ namespace TRPO_lab3
             radioButton2.Visible = true;
             trackBar1.Visible = false;
 
+
+            //отключаем не нужные кнопки
+            button28.Enabled = false; //10
+            button29.Enabled = false; //11
+            button30.Enabled = false; //12
+            button31.Enabled = false; //13
+            button32.Enabled = false; //14
+            button33.Enabled = false; //15
+            button16.Enabled = false; // .
+
             control.State = -1; 
         }
 
@@ -94,6 +105,16 @@ namespace TRPO_lab3
             radioButton1.Visible = true;
             radioButton2.Visible = true;
             trackBar1.Visible = false;
+
+
+            //отключаем не нужные кнопки
+            button28.Enabled = false; //10
+            button29.Enabled = false; //11
+            button30.Enabled = false; //12
+            button31.Enabled = false; //13
+            button32.Enabled = false; //14
+            button33.Enabled = false; //15
+            button16.Enabled = false; // .
 
             control.State = -1;
         }
