@@ -22,6 +22,15 @@ namespace TRPO_lab3
         // для 123.FE -> integerPartLength=3
         public static double convert(string P_num, int P, int integerPartLength)
         {
+            bool isNegative = false;
+            if (P_num.Length > 0 && P_num[0] == '-')
+            {
+                //убираем минус
+                isNegative = true;
+                P_num = P_num.Remove(0, 1);
+                integerPartLength--;
+            }
+
             double result = 0;
             int currentDigitIndex = 0;
             int currentPower = integerPartLength - 1;
@@ -43,14 +52,15 @@ namespace TRPO_lab3
                 currentDigitIndex++;
                 currentPower--;
             }
-            return result;
+            //возвращаем запомненный знак
+            return isNegative ? -result : result;
         }
 
         //Преобразовать из с.сч. с основанием р 
         //в с.сч. с основанием 10.
         public static double dval(string P_num, int P)
         {
-
+            //длина целой части числа
             int integerPartLength = P_num.IndexOf('.');
             //если число не содержит '.' => оно полностью целое
             if (integerPartLength == -1) integerPartLength = P_num.Length;
