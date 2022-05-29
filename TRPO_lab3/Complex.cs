@@ -22,11 +22,11 @@ namespace TRPO_lab3
             IsRe = true;
         }
 
-        public Complex(string re, string im)
+        public Complex(string re, string im, bool IsRe=true)
         {
             Re = re;
             Im = im;
-            IsRe = true;
+            this.IsRe = IsRe;
         }
 
         private void check_data(TANumber a)
@@ -103,7 +103,22 @@ namespace TRPO_lab3
         public override TANumber Negative()
         { 
             check_data(this);
-            return new Complex("-" + Re, Im);
+            if (IsRe)
+            {
+                if (Re[0] == '-')
+                    return new Complex(Re.Substring(1), Im);
+                else
+                    return new Complex("-" + Re, Im);
+            }
+            else
+            {
+                if (Im[0] == '-')
+                    return new Complex(Re,Im.Substring(1), false);
+                else
+                    return new Complex(Re, "-"+Im, false);
+            }
+
+           
         }
 
         

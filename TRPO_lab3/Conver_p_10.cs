@@ -50,7 +50,7 @@ namespace TRPO_lab3
         //в с.сч. с основанием 10.
         public static double dval(string P_num, int P)
         {
-            //длина целой части числа
+
             int integerPartLength = P_num.IndexOf('.');
             //если число не содержит '.' => оно полностью целое
             if (integerPartLength == -1) integerPartLength = P_num.Length;
