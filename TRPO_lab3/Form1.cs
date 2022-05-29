@@ -521,5 +521,42 @@ namespace TRPO_lab3
         {
             control.State = -1;
         }
+
+        private void button3_Click(object sender, EventArgs e) // MS
+        {
+            control.DoCommand(27);
+            RefreshText();
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button24.Text = control.processor.savedNumber.ToString();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e) //M+
+        {
+            control.DoCommand(26);
+            RefreshText();
+            button24.Text = control.processor.savedNumber.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e) // MR
+        {
+            control.DoCommand(28);
+            RefreshText();
+        }
+
+        private void button1_Click(object sender, EventArgs e) // MC
+        {
+            control.DoCommand(29);
+            RefreshText();
+            button1.Enabled = false;
+            button2.Enabled = false;
+            button24.Text = "";
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

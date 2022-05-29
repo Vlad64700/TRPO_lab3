@@ -58,7 +58,7 @@ namespace TRPO_lab3
 
         public override TANumber Copy()
         {
-            return new TPNumber();
+            return new TPNumber(Value, Notation);
         }
 
         public override bool IsEmpty()

@@ -22,7 +22,7 @@ namespace TRPO_lab3
         private char bufferOperation;
 
         // Операнд, который хранится в памяти
-        private TANumber savedNumber;
+        public TANumber savedNumber;
 
         // Флаг, показывающий, с каким операндом работаем: 
         private bool isLeftOperand;
