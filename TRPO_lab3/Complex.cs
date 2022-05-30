@@ -82,7 +82,7 @@ namespace TRPO_lab3
             double nextRe = Convert.ToDouble(Re) * Convert.ToDouble((b as Complex).Re)
                 - Convert.ToDouble(Im) * Convert.ToDouble((b as Complex).Im);
             double nextIm = Convert.ToDouble(Re) * Convert.ToDouble((b as Complex).Im)
-                - Convert.ToDouble((b as Complex).Re) * Convert.ToDouble(Im);
+                + Convert.ToDouble((b as Complex).Re) * Convert.ToDouble(Im);
             return new Complex(nextRe.ToString(), nextIm.ToString());
         }
 
